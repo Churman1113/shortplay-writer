@@ -1,0 +1,30 @@
+{
+  "version": "2.0",
+  "envId": "cloud1-9g2sgrzmc39fa2a5",
+  "region": "ap-shanghai",
+  "cloudBaseEnvs": [],
+  "services": [
+    {
+      "id": "juling-api",
+      "name": "juling-api",
+      "type": "cloud-run",
+      "conf": {
+        "cpu": 1,
+        "mem": 256,
+        "minNum": 0,
+        "maxNum": 10,
+        "policy": {
+          "concurrency": 100
+        },
+        "dockerfilePath": "Dockerfile",
+        "buildDir": "."
+      },
+      "routes": [
+        {
+          "route": "/api",
+          "target": "node ./index-cloudrun.js"
+        }
+      ]
+    }
+  ]
+}
