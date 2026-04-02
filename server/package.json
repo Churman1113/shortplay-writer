@@ -1,0 +1,20 @@
+{
+  "name": "juling-api",
+  "version": "1.0.0",
+  "description": "剧灵短剧编剧助手后端API",
+  "main": "index-cloudrun.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index-cloudrun.js"
+  },
+  "dependencies": {
+    "@cloudbase/js-sdk": "^2.27.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
